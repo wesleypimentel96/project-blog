@@ -1,0 +1,36 @@
+.borderPosts {
+    border: 1px solid #b87d00;
+}
+
+.buttonPosts {
+    border: 1px solid #b87d00;
+    padding: 8px 5px;
+    color: #b87d00;
+    transition: 0.8s;
+    border-radius: 5px;
+}
+
+.buttonPosts:hover {
+    background-color: #b87d00;
+    color: #fff;
+}
+
+.buttonShowMore {
+    border: 1px solid #b87d00;
+    transition: 0.8s;
+    background-color: #b87d00;
+    opacity: 0.6;
+    color: #fff;
+
+}
+
+.buttonShowMore:hover {
+    opacity: 1;
+
+}
+
+.buttonScrollY {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

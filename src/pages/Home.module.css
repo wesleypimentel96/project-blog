@@ -1,0 +1,23 @@
+.bannerHome {
+    background-image: url('../assets/bannerHome.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+
+}
+
+.bannerOpacity {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.buttonNewPost {
+    background-color: #1d1b18;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 1s;
+}
+
+.buttonNewPost:hover {
+    background-color: black;
+}
