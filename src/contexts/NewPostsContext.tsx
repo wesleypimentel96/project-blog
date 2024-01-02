@@ -1,7 +1,7 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { NewPosts } from "../types/NewPosts";
 
-
+const STORAGE_KEY_NEWPOSTS = 'NewPostsContext';
 
 type NewPostsConextType = {
     posts: NewPosts[];
@@ -12,7 +12,9 @@ type NewPostsConextType = {
 export const NewPostsContext = createContext<NewPostsConextType | null>(null)
 
 export const NewPostsContextProvider = ({ children }: { children: ReactNode }) => {
-    const [posts, setPosts] = useState<NewPosts[]>([]);
+    const [posts, setPosts] = useState<NewPosts[]>(
+        JSON.parse(localStorage.getItem(STORAGE_KEY_NEWPOSTS) || '[]')
+    );
 
     const addPosts = (title: string, body: string) => {
         setPosts([...posts, { id: posts.length, title, body }])
@@ -23,6 +25,10 @@ export const NewPostsContextProvider = ({ children }: { children: ReactNode }) =
             return p.id !== id;
         }))
     }
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEY_NEWPOSTS, JSON.stringify(posts))
+    }, [posts])
 
     return (
 
