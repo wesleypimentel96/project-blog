@@ -8,7 +8,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { BsSun } from 'react-icons/bs'
 
 
-interface IHeaderMobile {
+type IHeaderMobile = {
     hideButtonTheme?: boolean;
 }
 
@@ -46,11 +46,11 @@ export const MenuMobile = ({ hideButtonTheme }: IHeaderMobile) => {
             ${menuHamburger ? '' : 'bg-black/70  transition-all duration-500'}
         `}>
             <div className=" mt-5 cursor-pointer">
-                {menuHamburger &&
+                {menuHamburger && 
                     <RxHamburgerMenu onClick={handleMenuHamburger} className={` text-[#b87d00] dark:text-[#ffc855] text-3xl font-bold`} />
                 }
 
-                {menuClose &&
+                {menuClose && 
                     <IoMdClose onClick={handleMenuClose} className={` text-white text-3xl`} />
                 }
             </div>

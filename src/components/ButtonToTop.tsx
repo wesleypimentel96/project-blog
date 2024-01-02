@@ -11,16 +11,7 @@ export const ButtonScrollToTop = () => {
         });
     };
 
-    const toggleVisiblity = () => {
-        const scrolled = window.scrollY;
-        if (scrolled > 300) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
-    };
-
-    window.addEventListener('scroll', toggleVisiblity);
+    window.addEventListener('scroll', () => setIsVisible(!!(window.scrollY > 300)));
 
     return (
         <>

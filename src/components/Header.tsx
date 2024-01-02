@@ -31,11 +31,11 @@ export const Header = ({ hideButtonTheme }: IHeader) => {
     return (
         <header className={`h-[10vh]  ${styles.header} `}>
             <div className=" container mx-auto flex justify-between px-2 items-center">
-                <h1 className={`font-semibold  text-3xl hover:opacity-70 ${styles.logo}  dark:text-[#ffc855] text-[#b87d00] transition-all duration-500`} ><Link to={'/'}>Blogger</Link></h1>
+                <h1 className={`font-semibold  text-3xl 2xl:text-3xl hover:opacity-70 ${styles.logo}  dark:text-[#ffc855] text-[#b87d00] transition-all duration-500`} ><Link to={'/'}>Blogger</Link></h1>
 
-                <MenuMobile />
+                <MenuMobile hideButtonTheme={hideButtonTheme} />
 
-                <nav className={` hidden md:block text-[#b87d00] dark:text-[#ffc855]`}>
+                <nav className={` hidden md:block 2xl:text-md text-[#b87d00] dark:text-[#ffc855]`}>
                     <ul className='flex gap-4 '>
                         <li className=' flex items-center'><Link to={'/'} className={`${styles.buttonDecotarion}  font-semibold hover:scale-105 transition-all duration-300`}>Home</Link></li>
                         <li className=' flex items-center'><Link to={'/posts'} className={`${styles.buttonDecotarion}  font-semibold hover:scale-105 transition-all duration-300`}>Posts</Link></li>
