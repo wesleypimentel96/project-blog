@@ -34,7 +34,7 @@ export const PhotoGallery = () => {
             <Header />
 
             {showGallery &&
-                <section className="container mx-auto grid grid-cols-1 gap-8 px-10 py-10 md:grid-cols-2 lg:grid-cols-3">
+                <section className="container mx-auto min-h-screen grid grid-cols-1 gap-8 px-10 py-10 md:grid-cols-2 lg:grid-cols-3">
                     {photoList.map(item => (
                         <ImageItem
                             key={item.id}
