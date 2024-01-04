@@ -11,9 +11,9 @@ export const Modal = ({ imageGallery, onClick }: Props) => {
 
 
     return (
-        <div className="h-[70vh] md:h-[80vh] container mx-auto flex flex-col items-center px-2">
+        <div className="h-[80vh] md:h-[80vh] container mx-auto flex flex-col items-center px-2">
             <div className='flex justify-center mt-10 max-w-xs md:max-w-3xl lg:max-w-4xl mx-auto'>
-                <img className=' h-96 md:h-[30em] md:w-[40em] lg:w-[60em] rounded-lg' src={`/images/${imageGallery}`}
+                <img className=' h-[30em] md:h-[30em] md:w-[40em] lg:w-[60em] rounded-lg' src={`/images/${imageGallery}`}
                 />
 
             </div>
